@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pondok Ramadan Digital 2026</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  let currentIndex = 0;
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const totalSlides = slides.length;
+
+  function updateSlide() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+
+  // Auto slide setiap 4 detik
+  setInterval(nextSlide, 4000);
+</script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3d4e6d",
+            gold: "#d7ad2f",
+            cream: "#e8e1d7",
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    <style>
+
+/* Base Card */
+.benefit-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 20px 24px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Hover Effect */
+.benefit-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Icon */
+.icon {
+  font-size: 22px;
+}
+
+/* Highlight Special */
+.highlight-card {
+  border: 1px solid #d7ad2f;
+  background: rgba(215,173,47,0.12);
+}
+
+.highlight-card:hover {
+  box-shadow: 0 0 20px rgba(215,173,47,0.6);
+}
+
+</style>
+  <style>
+
+/* Testimoni Card */
+.testi-card {
+  min-width: 100%;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.testi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(215,173,47,0.6);
+}
+
+/* Foto */
+.testi-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 4px solid #d7ad2f;
+}
+
+/* Text */
+.testi-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Name */
+.testi-name {
+  font-weight: 700;
+  color: #3d4e6d;
+}
+
+/* Tombol */
+.testi-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3d4e6d;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.testi-btn:hover {
+  background: #d7ad2f;
+  color: #3d4e6d;
+  box-shadow: 0 0 15px rgba(215,173,47,0.7);
+}
+
+</style>
+  <style>
+
+/* CTA Zoom Animation */
+@keyframes zoomInOut {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.cta-btn {
+  animation: zoomInOut 2s infinite;
+  transition: 0.4s ease;
+}
+
+.cta-btn:hover {
+  background: #3d4e6d;
+  color: #d7ad2f;
+  box-shadow: 0 0 25px rgba(215,173,47,0.8);
+  transform: scale(1.1);
+}
+
+</style>
+  <style>
+
+/* Pulse Glow Animation untuk Harga */
+@keyframes pricePulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(215,173,47,0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    text-shadow: 0 0 30px rgba(215,173,47,0.9);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(215,173,47,0.4);
+  }
+}
+
+.price-pulse {
+  color: #d7ad2f;
+  animation: pricePulse 2s infinite ease-in-out;
+  transition: 0.3s ease;
+}
+
+.price-pulse:hover {
+  transform: scale(1.12);
+  text-shadow: 0 0 35px rgba(215,173,47,1);
+}
+
+</style>
+  <style>
+
+/* Card */
+.gallery-card {
+  min-width: 100%;
+  padding: 0 10px;
+  transition: 0.5s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  transition: 0.5s ease;
+}
+
+/* Hover Effect */
+.gallery-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(215,173,47,0.8);
+}
+
+/* Navigation Button */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d7ad2f;
+  color: #3d4e6d;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.gallery-btn:hover {
+  background: white;
+  box-shadow: 0 0 15px rgba(215,173,47,0.9);
+}
+
+</style>
+  <style>
+
+/* Slider Layout */
+#mentorSlider > div {
+  min-width: 300px;
+  margin: 0 12px;
+}
+
+/* Card Style */
+.mentor-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.mentor-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(215,173,47,0.6);
+  border: 2px solid #d7ad2f;
+}
+
+/* Image */
+.mentor-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 4px solid #d7ad2f;
+}
+
+/* Name */
+.mentor-card h3 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Role */
+.mentor-card p {
+  font-size: 14px;
+  color: #3d4e6d;
+}
+
+/* Navigation Button */
+.nav-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: #3d4e6d;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #d7ad2f;
+  color: #3d4e6d;
+  box-shadow: 0 0 15px rgba(215,173,47,0.7);
+}
+
+</style>
+  
+  <style>
+
+/* Toggle Button */
+.toggle-btn {
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #3d4e6d;
+}
+
+.active-toggle {
+  background: #d7ad2f;
+  color: #3d4e6d;
+  box-shadow: 0 0 15px rgba(215,173,47,0.6);
+}
+
+/* Agenda Content Animation */
+.agenda-content {
+  transition: all 0.5s ease;
+}
+
+/* Agenda Card */
+.agenda-card {
+  background: white;
+  padding: 18px 24px;
+  border-radius: 14px;
+  border-left: 5px solid #d7ad2f;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.agenda-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+</style>
+  
+  <script>
+function showAgenda(type) {
+  const ibu = document.getElementById('agendaIbu');
+  const anak = document.getElementById('agendaAnak');
+  const btnIbu = document.getElementById('btnIbu');
+  const btnAnak = document.getElementById('btnAnak');
+
+  if (type === 'ibu') {
+    ibu.classList.remove('hidden');
+    anak.classList.add('hidden');
+    btnIbu.classList.add('active-toggle');
+    btnAnak.classList.remove('active-toggle');
+  } else {
+    anak.classList.remove('hidden');
+    ibu.classList.add('hidden');
+    btnAnak.classList.add('active-toggle');
+    btnIbu.classList.remove('active-toggle');
+  }
+}
+</script>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  let galleryIndex = 0;
+  const gallerySlider = document.getElementById("gallerySlider");
+  const galleryCards = document.querySelectorAll(".gallery-card");
+
+  function updateGallery() {
+    gallerySlider.style.transform = `translateX(-${galleryIndex * 100}%)`;
+  }
+
+  window.nextGallery = function() {
+    if (galleryIndex < galleryCards.length - 1) {
+      galleryIndex++;
+    } else {
+      galleryIndex = 0;
+    }
+    updateGallery();
+  }
+
+  window.prevGallery = function() {
+    if (galleryIndex > 0) {
+      galleryIndex--;
+    } else {
+      galleryIndex = galleryCards.length - 1;
+    }
+    updateGallery();
+  }
+
+  // Auto Slide
+  setInterval(() => {
+    nextGallery();
+  }, 4000);
+
+});
+
+</script>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  let testiIndex = 0;
+  const testiSlider = document.getElementById("testiSlider");
+  const testiCards = document.querySelectorAll(".testi-card");
+
+  function updateTesti() {
+    testiSlider.style.transform = `translateX(-${testiIndex * 100}%)`;
+  }
+
+  window.nextTesti = function() {
+    if (testiIndex < testiCards.length - 1) {
+      testiIndex++;
+    } else {
+      testiIndex = 0;
+    }
+    updateTesti();
+  }
+
+  window.prevTesti = function() {
+    if (testiIndex > 0) {
+      testiIndex--;
+    } else {
+      testiIndex = testiCards.length - 1;
+    }
+    updateTesti();
+  }
+
+  // Auto slide
+  setInterval(() => {
+    nextTesti();
+  }, 5000);
+
+});
+
+</script>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  let currentIndex = 0;
+  const slider = document.getElementById("mentorSlider");
+  const cards = document.querySelectorAll(".mentor-card");
+
+  function getCardWidth() {
+    return cards[0].offsetWidth + 24; 
+    // 24 = margin kiri kanan (12 + 12)
+  }
+
+  function updateSlide() {
+    const cardWidth = getCardWidth();
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  window.nextSlide = function() {
+    if (currentIndex < cards.length - 3) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateSlide();
+  }
+
+  window.prevSlide = function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = cards.length - 3;
+    }
+    updateSlide();
+  }
+
+  // Auto Slide
+  setInterval(() => {
+    nextSlide();
+  }, 4000);
+
+  // Responsive update
+  window.addEventListener("resize", updateSlide);
+
+});
+
+</script>
+  </style>
+</head>
+
+<body class="bg-cream text-primary">
+
+<!-- ========================= -->
+<!-- TOP BANNER KEGIATAN ANAK -->
+<!-- ========================= -->
+<!-- SLIDER KEGIATAN ANAK -->
+<!-- ========================= -->
+<section class="relative overflow-hidden">
+
+  <div class="relative w-full h-64 md:h-80">
+
+    <!-- Slides Container -->
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+
+      <img src="https://via.placeholder.com/1200x500"
+           class="w-full flex-shrink-0 object-cover">
+
+      <img src="https://via.placeholder.com/1200x500/cccccc"
+           class="w-full flex-shrink-0 object-cover">
+
+      <img src="https://via.placeholder.com/1200x500/aaaaaa"
+           class="w-full flex-shrink-0 object-cover">
+
+    </div>
+
+    <!-- Tombol Kiri -->
+    <button onclick="prevSlide()"
+      class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-primary p-3 rounded-full shadow">
+      ❮
+    </button>
+
+    <!-- Tombol Kanan -->
+    <button onclick="nextSlide()"
+      class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-primary p-3 rounded-full shadow">
+      ❯
+    </button>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+<section class="bg-primary text-white py-24 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEXT -->
+    <div data-aos="fade-right">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Pondok Ramadan Digital 2026
+      </h1>
+
+      <p class="text-xl text-gold font-semibold mb-6">
+        Program 14 Hari Ibu & Anak — Ubah Screentime Jadi Meaningful Time
+      </p>
+
+      <!-- COUNTDOWN -->
+      <div class="grid grid-cols-4 gap-4 text-center mb-8">
+
+        <div class="bg-gold text-primary py-4 rounded-xl shadow-lg">
+          <div id="days" class="text-2xl font-bold">00</div>
+          <div class="text-sm">Hari</div>
+        </div>
+
+        <div class="bg-gold text-primary py-4 rounded-xl shadow-lg">
+          <div id="hours" class="text-2xl font-bold">00</div>
+          <div class="text-sm">Jam</div>
+        </div>
+
+        <div class="bg-gold text-primary py-4 rounded-xl shadow-lg">
+          <div id="minutes" class="text-2xl font-bold">00</div>
+          <div class="text-sm">Menit</div>
+        </div>
+
+        <div class="bg-gold text-primary py-4 rounded-xl shadow-lg">
+          <div id="seconds" class="text-2xl font-bold">00</div>
+          <div class="text-sm">Detik</div>
+        </div>
+
+      </div>
+
+      <a href="#harga"
+         class="bg-gold text-primary font-semibold px-8 py-3 rounded-full hover:scale-110 transition duration-300">
+         Daftar Sekarang
+      </a>
+    </div>
+
+    <!-- FLYER IMAGE PLACE -->
+    <div data-aos="fade-left" class="text-center">
+      <img src="https://via.placeholder.com/500x650"
+           class="rounded-2xl shadow-2xl mx-auto">
+      <p class="text-sm mt-4 opacity-80">*Ganti dengan flyer resmi program</p>
+    </div>
+
+  </div>
+</section>
+  
+  <!-- ========================= -->
+<!-- SECTION MASALAH -->
+<!-- ========================= -->
+<section class="relative py-24 px-6 bg-gradient-to-br from-primary via-[#2f3d56] to-primary text-white overflow-hidden">
+
+  <div class="max-w-6xl mx-auto">
+
+    <h2 data-aos="fade-up"
+        class="text-3xl md:text-4xl font-bold text-center mb-4">
+        Apakah Bunda Sedang Mengalami Ini?
+    </h2>
+
+    <p data-aos="fade-up" data-aos-delay="200"
+       class="text-center text-cream mb-16 max-w-2xl mx-auto">
+       Ramadan seharusnya jadi momen terbaik untuk keluarga…  
+       tapi realitanya sering berbeda 💔
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- CARD 1 -->
+      <div data-aos="fade-up"
+           class="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-semibold mb-3 text-gold">
+          Anak Makin Sulit Lepas dari Gadget
+        </h3>
+        <p class="text-cream">
+          Setiap hari waktunya habis untuk layar.  
+          Ketika diminta berhenti, malah jadi emosi.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div data-aos="fade-up" data-aos-delay="150"
+           class="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-semibold mb-3 text-gold">
+          Ramadan Terasa Biasa Saja
+        </h3>
+        <p class="text-cream">
+          Sudah niat mau bikin kegiatan spesial,  
+          tapi akhirnya berjalan tanpa arah.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div data-aos="fade-up" data-aos-delay="300"
+           class="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-semibold mb-3 text-gold">
+          Ingin Bonding, Tapi Bingung Mulai Dari Mana
+        </h3>
+        <p class="text-cream">
+          Mau lebih dekat dengan anak,  
+          tapi aktivitasnya itu-itu saja.
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div data-aos="fade-up" data-aos-delay="450"
+           class="backdrop-blur-lg bg-white/10 border border-white/20 p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-500">
+        <h3 class="text-xl font-semibold mb-3 text-gold">
+          Takut Anak Kehilangan Momen Ramadan
+        </h3>
+        <p class="text-cream">
+          Ramadan datang setahun sekali…  
+          tapi anak belum merasakan makna yang sebenarnya.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  
+  <!-- ========================= -->
+<!-- MID CTA PREMIUM -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-cream relative overflow-hidden">
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <p data-aos="fade-up" class="text-gold font-semibold mb-3 tracking-widest">
+      RAMADAN 2026 SPECIAL PROGRAM
+    </p>
+
+    <h2 data-aos="fade-up" data-aos-delay="150"
+        class="text-3xl md:text-4xl font-bold mb-6">
+        Jangan Biarkan Ramadan Lewat Tanpa Perubahan 💛
+    </h2>
+
+    <p data-aos="fade-up" data-aos-delay="300"
+       class="max-w-2xl mx-auto text-lg mb-14">
+       14 hari yang bisa mengubah kebiasaan anak, mempererat bonding,
+       dan menjadikan Ramadan lebih bermakna untuk keluarga.
+    </p>
+
+    <!-- CARD WITH ROTATING BORDER -->
+    <div data-aos="zoom-in"
+         class="relative inline-block">
+
+      <!-- Animated Border -->
+      <div class="absolute -inset-1 rounded-3xl animate-border-spin"></div>
+
+      <!-- Card -->
+      <div class="relative bg-white p-10 md:p-14 rounded-3xl shadow-2xl z-10">
+
+        <h3 class="text-2xl font-bold text-primary mb-4">
+          Pondok Ramadan Digital 2026
+        </h3>
+
+        <p class="text-lg mb-6">
+          Program 14 Hari Ibu & Anak  
+          dengan bimbingan 8 mentor inspiratif.
+        </p>
+
+        <a href="#harga"
+           class="bg-gold text-primary font-semibold px-8 py-3 rounded-full hover:scale-110 transition duration-300 shadow-lg">
+           Amankan Slot Sekarang
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+ <!-- ========================= -->
+<!-- SECTION BENEFIT -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-primary text-white relative overflow-hidden">
+
+  <div class="max-w-6xl mx-auto">
+
+    <h2 data-aos="fade-up"
+        class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Apa yang Bunda & Anak Dapatkan?
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-14">
+
+      <!-- ================= UNTUK ANAK ================= -->
+      <div data-aos="fade-right">
+
+        <div class="inline-block bg-gold text-primary font-bold px-6 py-2 rounded-full mb-8 shadow-lg">
+          UNTUK ANAK
+        </div>
+
+        <div class="space-y-6">
+
+          <div class="benefit-card">
+            <span class="icon">📘</span>
+            Ebook Kisah Islami Animasi / Komik
+          </div>
+
+          <div class="benefit-card">
+            <span class="icon">🎥</span>
+            Video Pembelajaran Anak (7 Hari)
+          </div>
+
+          <div class="benefit-card">
+            <span class="icon">✨</span>
+            Tantangan & Aktivitas Harian
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= UNTUK BUNDA ================= -->
+      <div data-aos="fade-left">
+
+        <div class="inline-block bg-gold text-primary font-bold px-6 py-2 rounded-full mb-8 shadow-lg">
+          UNTUK BUNDA
+        </div>
+
+        <div class="space-y-6">
+
+          <div class="benefit-card">
+            <span class="icon">📓</span>
+            Jurnal Ramadan & Ilmu Parenting
+          </div>
+
+          <div class="benefit-card">
+            <span class="icon">💻</span>
+            Digital Skill & Bisnis Digital
+          </div>
+
+          <div class="benefit-card">
+            <span class="icon">🎓</span>
+            7x Live Class Bareng Expert
+          </div>
+
+          <div class="benefit-card highlight-card">
+            🎁 Hadiah Sponsor & E-Certificate
+          </div>
+
+          <div class="benefit-card highlight-card">
+            💎 Akses Canva & CapCut Pro
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <!-- ========================= -->
+<!-- SECTION RINCIAN AGENDA -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-[#e8e1d7] text-primary">
+
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Agenda Aktivitas Ibu & Anak
+    </h2>
+
+    <p class="text-center text-lg mb-12">
+      Jadwal terstruktur selama 14 hari penuh makna.
+    </p>
+
+    <!-- Toggle Button -->
+    <div class="flex justify-center mb-10">
+      <div class="bg-white p-2 rounded-full shadow-lg flex gap-2">
+        <button onclick="showAgenda('ibu')" id="btnIbu"
+          class="toggle-btn active-toggle">
+          Materi Ibu
+        </button>
+
+        <button onclick="showAgenda('anak')" id="btnAnak"
+          class="toggle-btn">
+          Materi Anak
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= MATERI IBU ================= -->
+    <div id="agendaIbu" class="agenda-content">
+
+      <div class="space-y-4">
+
+        <div class="agenda-card">28 Feb — Opening</div>
+        <div class="agenda-card">1 Maret — Bongkar Parenting Ala Qur'an</div>
+        <div class="agenda-card">2 Maret — Peluang IRT Cuan di Era Digital</div>
+        <div class="agenda-card">3 Maret — Reparenting Innerchild</div>
+        <div class="agenda-card">4 Maret — Membuat Video Animasi Lewat HP</div>
+        <div class="agenda-card">5 Maret — Ajari Anak Puasa dengan Bahagia</div>
+        <div class="agenda-card">6 Maret — Bongkar Cara Cuan dari Shopee Affiliate & Instagram</div>
+        <div class="agenda-card">7 Maret — Mengenal Lebih Dalam Tentang Darah Wanita</div>
+
+      </div>
+    </div>
+
+    <!-- ================= MATERI ANAK ================= -->
+    <div id="agendaAnak" class="agenda-content hidden">
+
+      <div class="space-y-4">
+
+        <div class="agenda-card">28 Feb – 7 Maret — Pre Class Challenge</div>
+        <div class="agenda-card">8 Maret — Aku Cinta Ramadan</div>
+        <div class="agenda-card">9 Maret — Belajar Puasa Dengan Bahagia</div>
+        <div class="agenda-card">10 Maret — Teladan Nabi Untuk Anak Hebat</div>
+        <div class="agenda-card">11 Maret — Adab & Akhlak Anak Muslim</div>
+        <div class="agenda-card">12 Maret — Sahabat Al-Quran Sejak Dini</div>
+        <div class="agenda-card">13 Maret — Read Aloud & Simak Sirah</div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  <!-- ========================= -->
+<!-- SECTION MENTOR EXPERT -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-[#e8e1d7] text-primary overflow-hidden">
+
+  <div class="max-w-6xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      Dibimbing oleh Mentor-Mentor Expert
+    </h2>
+
+    <div class="relative">
+
+      <!-- Slider Wrapper -->
+      <div id="mentorSlider" class="flex transition-transform duration-700 ease-in-out">
+
+        <!-- CARD -->
+        <!-- Ganti src gambar sesuai foto mentor ya -->
+        
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Rinanti Hasari</h3>
+          <p>Affiliator Tiktok & Digital Creator revenue 1 Milyar</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Sunninatq Addina</h3>
+          <p>Tahsin Enthusiast</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Nafisah Nida' A., CH.</h3>
+          <p>Founder Kampus Bunda</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Nida Adilah</h3>
+          <p>Affiliator Shopee Komisi 40 juta++</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Dika Rahma</h3>
+          <p>Digital Product Creator revenue 300 juta++</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Siti Rohima, C.Ht., CM.NNLP</h3>
+          <p>Professional Hypnotherapist & Master NLP</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Ustadzah Laily</h3>
+          <p>Islamic Parenting Enthusiast</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://via.placeholder.com/150" class="mentor-img">
+          <h3>Ustadzah Mainnah</h3>
+          <p>Islamic Parenting Enthusiast</p>
+        </div>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <button onclick="prevSlide()" 
+        class="nav-btn left-0">
+        ❮
+      </button>
+
+      <button onclick="nextSlide()" 
+        class="nav-btn right-0">
+        ❯
+      </button>
+
+    </div>
+
+  </div>
+</section>
+<!-- ========================= -->
+<!-- SECTION HADIAH TELADAN -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-primary text-white relative overflow-hidden">
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+      🎁 Hadiah Peserta Teladan
+    </h2>
+
+    <p class="text-lg mb-14 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">
+      Bukan hanya belajar dan bertumbuh, tapi juga berkesempatan 
+      mendapatkan hadiah spesial untuk peserta paling aktif, 
+      paling konsisten, dan paling menginspirasi selama program.
+    </p>
+
+    <!-- CARD CENTER -->
+    <div class="relative inline-block group" data-aos="zoom-in" data-aos-delay="300">
+
+      <!-- Glow Border -->
+      <div class="absolute -inset-1 rounded-3xl animate-gold-border"></div>
+
+      <!-- Card -->
+      <div class="relative bg-white text-primary rounded-3xl p-10 md:p-14 shadow-2xl z-10">
+
+        <!-- Placeholder Flyer -->
+        <div class="mb-8">
+          <img src="https://via.placeholder.com/600x400"
+               alt="Flyer Hadiah"
+               class="rounded-2xl shadow-lg mx-auto hover:scale-105 transition duration-500">
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Total Hadiah Jutaan Rupiah ✨
+        </h3>
+
+        <p class="text-lg mb-6">
+          Reward spesial berupa uang tunai, produk sponsor, 
+          dan sertifikat penghargaan untuk Bunda & Anak terpilih.
+        </p>
+
+        <div class="bg-gold text-primary font-semibold px-6 py-3 rounded-full inline-block shadow-md group-hover:shadow-xl transition duration-300">
+          Siapkan Dirimu Jadi Peserta Terbaik!
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  <!-- ========================= -->
+<!-- SECTION TESTIMONI -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-[#e8e1d7] text-primary overflow-hidden">
+
+  <div class="max-w-5xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      Kata Mereka Tentang Program Ini 💛
+    </h2>
+
+    <div class="relative overflow-hidden">
+
+      <!-- Slider -->
+      <div id="testiSlider" class="flex transition-transform duration-700 ease-in-out">
+
+        <!-- Testimoni 1 -->
+        <div class="testi-card">
+          <img src="https://via.placeholder.com/100" class="testi-img">
+          <p class="testi-text">
+            “Program ini bikin saya dan anak jadi lebih dekat.
+            Anak lebih semangat puasa dan saya jadi lebih percaya diri belajar digital.”
+          </p>
+          <h4 class="testi-name">Aisyah - Ibu 2 Anak</h4>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div class="testi-card">
+          <img src="https://via.placeholder.com/100" class="testi-img">
+          <p class="testi-text">
+            “Materinya terstruktur dan mudah dipahami.
+            Anak happy, saya juga dapat ilmu baru yang bermanfaat.”
+          </p>
+          <h4 class="testi-name">Rahmawati - Peserta 2025</h4>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div class="testi-card">
+          <img src="https://via.placeholder.com/100" class="testi-img">
+          <p class="testi-text">
+            “Challenge hariannya bikin anak disiplin.
+            Ramadan kemarin terasa lebih bermakna banget.”
+          </p>
+          <h4 class="testi-name">Nadira - Ibu Rumah Tangga</h4>
+        </div>
+
+      </div>
+
+      <!-- Tombol -->
+      <button onclick="prevTesti()" class="testi-btn left-0">❮</button>
+      <button onclick="nextTesti()" class="testi-btn right-0">❯</button>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- ========================= -->
+<!-- SECTION GALLERY KEGIATAN -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-primary text-white overflow-hidden">
+
+  <div class="max-w-6xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      Keseruan Kegiatan Anak 💛
+    </h2>
+
+    <p class="mb-16 text-lg">
+      Intip momen kebersamaan dan aktivitas seru selama program berlangsung.
+    </p>
+
+    <div class="relative overflow-hidden">
+
+      <!-- Slider Wrapper -->
+      <div id="gallerySlider" class="flex transition-transform duration-700 ease-in-out">
+
+        <!-- Gambar 1 -->
+        <div class="gallery-card">
+          <img src="https://via.placeholder.com/600x400" alt="Kegiatan 1">
+        </div>
+
+        <!-- Gambar 2 -->
+        <div class="gallery-card">
+          <img src="https://via.placeholder.com/600x400" alt="Kegiatan 2">
+        </div>
+
+        <!-- Gambar 3 -->
+        <div class="gallery-card">
+          <img src="https://via.placeholder.com/600x400" alt="Kegiatan 3">
+        </div>
+
+        <!-- Gambar 4 -->
+        <div class="gallery-card">
+          <img src="https://via.placeholder.com/600x400" alt="Kegiatan 4">
+        </div>
+
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <button onclick="prevGallery()" class="gallery-btn left-0">❮</button>
+      <button onclick="nextGallery()" class="gallery-btn right-0">❯</button>
+
+    </div>
+
+  </div>
+</section>
+  <!-- ========================= -->
+<!-- SECTION HARGA -->
+<!-- ========================= -->
+<section class="py-24 px-6 bg-[#e8e1d7] text-primary relative">
+
+  <div class="max-w-3xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      Investasi Ramadan Paling Worth It!
+    </h2>
+
+    <!-- CARD -->
+    <div class="relative bg-white rounded-[30px] p-10 md:p-14 shadow-2xl border-2 border-[#3d4e6d] overflow-hidden">
+
+      <!-- Wrapper Card -->
+<div class="relative bg-white rounded-[30px] pt-16 pb-10 px-10 md:px-14 shadow-2xl border-2 border-[#3d4e6d]">
+
+  <!-- Badge Early Bird -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+  
+    <div class="bg-[#d7ad2f] text-[#3d4e6d] font-bold px-8 py-3 rounded-full shadow-lg">
+      🔥 EARLY BIRD: 50 ORANG PERTAMA
+    </div>
+  </div>
+
+      <!-- List Benefit -->
+      <div class="text-left mt-10 space-y-4 text-lg">
+        <p>📚 Ebook 30 Hari (Rp 150k)</p>
+        <p>🎥 Video Belajar (Rp 100k)</p>
+        <p>🎓 Live Class 7x (Rp 200k)</p>
+        <p>📝 Template & Jurnal (Rp 50k)</p>
+        <p>🎁 Bonus Tambahan (Rp 50k)</p>
+      </div>
+
+      <div class="border-t border-dashed border-gray-300 my-10"></div>
+
+      <p class="line-through text-gray-400 text-lg">
+        Total Value Rp 550.000
+      </p>
+
+      <h3 class="price-pulse text-5xl md:text-6xl font-extrabold my-6">
+  Rp 79.000
+</h3>
+
+      <p class="text-lg font-semibold mb-10">
+        Satu harga untuk <span class="text-[#3d4e6d] font-bold">IBU + SEMUA ANAK!</span>
+      </p>
+
+      <!-- CTA BUTTON -->
+      <a href="https://wa.me/628xxxx"
+         target="_blank"
+         class="cta-btn inline-block bg-[#d7ad2f] text-white font-bold px-10 py-5 rounded-full text-lg shadow-lg">
+         DAFTAR SEKARANG (SISA 5 SEAT)
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white text-center py-6 text-sm">
+  © 2026 Pondok Ramadan Digital
+</footer>
+
+<script>
+  AOS.init();
+
+  const targetDate = new Date("Feb 28, 2026 00:00:00").getTime();
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) 
+                   / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) 
+                     / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
