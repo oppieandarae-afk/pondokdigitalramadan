@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.prevSlide = function() {
     if (currentIndex > 0) {
-      currentIndex--;
+     currentIndex--;
     } else {
       currentIndex = cards.length - 3;
     }
@@ -518,43 +518,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <body class="bg-cream text-primary">
 
-<!-- ========================= -->
-<!-- TOP BANNER KEGIATAN ANAK -->
-<!-- ========================= -->
-<!-- SLIDER KEGIATAN ANAK -->
-<!-- ========================= -->
-<section class="relative overflow-hidden">
-
-  <div class="relative w-full h-64 md:h-80">
-
-    <!-- Slides Container -->
-    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
-
-      <img src="https://raw.githubusercontent.com/oppieandarae-afk/pondokdigitalramadan/14232698d1056010e9368b9892a4df4862648c7b/banner%201.png"
-           class="w-full flex-shrink-0 object-cover">
-
-      <img src="https://raw.githubusercontent.com/oppieandarae-afk/pondokdigitalramadan/14232698d1056010e9368b9892a4df4862648c7b/banner%202.png"
-           class="w-full flex-shrink-0 object-cover">
-
-      <img src="https://raw.githubusercontent.com/oppieandarae-afk/pondokdigitalramadan/14232698d1056010e9368b9892a4df4862648c7b/banner%203.png"
-           class="w-full flex-shrink-0 object-cover">
-
-    </div>
-
-    <!-- Tombol Kiri -->
-    <button onclick="prevSlide()"
-      class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-primary p-3 rounded-full shadow">
-      ❮
-    </button>
-
-    <!-- Tombol Kanan -->
-    <button onclick="nextSlide()"
-      class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-primary p-3 rounded-full shadow">
-      ❯
-    </button>
-
-  </div>
-</section>
 
 <!-- ========================= -->
 <!-- HERO SECTION -->
@@ -1226,3 +1189,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
